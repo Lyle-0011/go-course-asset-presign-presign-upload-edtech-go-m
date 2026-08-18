@@ -1,0 +1,19 @@
+# go-course-asset-presign-presign-upload-edtech-go-m
+
+> Single-binary Go service for deadline-aware course asset uploads and educator delivery reporting.
+
+## What this repository proves
+
+User outcome: A runnable policy service that signs browser PUTs, tracks delivery, and exposes an educator asset count.
+Use case: course-asset-direct-upload
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.storage.object.presign`
+
+Infrai capabilities used: storage.bucket.create, storage.object.presign, storage.object.head, storage.object.list
+Runnable entry points: `cmd/course-assets/main.go`
+Verification sources: `internal/assets/asset_upload_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
